@@ -182,17 +182,19 @@ export default {
         let elem = previewElements[i];
         let rw = 0;
         let rh = 0;
-        if (typeof elem.naturalWidth === "undefined") {
-          // IE 6/7/8
-          let img = new window.Image();
-          img.src = elem.getAttribute("src");
-          rw = img.width;
-          rh = img.height;
-        } else {
-          // HTML5 browsers
-          rw = elem.naturalWidth;
-          rh = elem.naturalHeight;
-        }
+        rw = elem.width;
+        rh = elem.height;
+        // if (typeof elem.naturalWidth === "undefined") {
+        //   // IE 6/7/8
+        //   let img = new window.Image();
+        //   img.src = elem.getAttribute("src");
+        //   rw = img.width;
+        //   rh = img.height;
+        // } else {
+        //   // HTML5 browsers
+        //   rw = elem.naturalWidth;
+        //   rh = elem.naturalHeight;
+        // }
         items.push({
           el: elem,
           src: elem.getAttribute("src"),
