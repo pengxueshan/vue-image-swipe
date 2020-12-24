@@ -99,6 +99,14 @@ defaultOpt: {
 ### demo
 
 [demo](https://zhhshen.github.io/vue-image-swipe/example/index.html)
+
+### Fix https://github.com/zhhshen/vue-image-swipe/issues/1
+传入images的时候带上width，height
+this.$imagePreview({
+  images: [{src: 'xxxxx.png', width: '100', height: '100'}],
+  index: index,
+})
+
 ###  LICENSE
 
 MIT
